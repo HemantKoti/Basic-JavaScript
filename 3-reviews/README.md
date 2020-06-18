@@ -1,3 +1,3 @@
 # Counter
 
-Basic Counter application with 'Increase', 'Decrease' and 'Reset' buttons.
+Basic reviews application with next, previous and randomized reviews.
