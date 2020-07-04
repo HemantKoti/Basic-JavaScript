@@ -44,9 +44,9 @@ const author = document.getElementById("author");
 const job = document.getElementById("job");
 const info = document.getElementById("info");
 
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-const randomBtn = document.querySelector('.random-btn');
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+const randomBtn = document.querySelector(".random-btn");
 
 // set starting item
 let currentItem = 0;
@@ -65,27 +65,25 @@ function getRandomNumber() {
 }
 
 // load initial item
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener("DOMContentLoaded", function () {
   showPerson(currentItem);
 });
 
 // show next person
-nextBtn.addEventListener('click', function () {
+nextBtn.addEventListener("click", function () {
   currentItem++;
-  if (currentItem >= reviews.length)
-    currentItem = 0;
+  if (currentItem >= reviews.length) currentItem = 0;
   showPerson(currentItem);
 });
 
 // show previous person
-prevBtn.addEventListener('click', function () {
+prevBtn.addEventListener("click", function () {
   currentItem--;
-  if (currentItem < 0)
-    currentItem = reviews.length - 1;
+  if (currentItem < 0) currentItem = reviews.length - 1;
   showPerson(currentItem);
 });
 
 // show random person
-randomBtn.addEventListener('click', function() {
+randomBtn.addEventListener("click", function () {
   showPerson(getRandomNumber());
 });
